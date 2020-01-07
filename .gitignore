@@ -1,3 +1,6 @@
 /UnitTests/bin
 /UnitTests/obj
+/IntegrationTests/bin
+/IntegrationTests/obj
+/.vscode
 /.vs
