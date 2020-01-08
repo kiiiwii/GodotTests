@@ -49,26 +49,26 @@ namespace UnitTests
         public static IEnumerable<object[]> FromEulerData =>
             new List<object[]>
             {
-                // new object[]{
-                //     new Vector3(0, (float)Math.PI/2, 0),
-                //     0.70710677f,
-                //     0.0f,
-                //     0.70710677f,
-                //     0f
-                // },
-                // new object[]{
-                //     new Vector3((float)Math.PI/2, 0.0f, 0.0f),
-                //     0.70710677f,
-                //     0.70710677f,
-                //     0.0f,
-                //     0.0f
-                // },
+                new object[]{
+                    new Vector3(0, (float)Math.PI/2, 0),
+                    0.70710677f,
+                    0.0f,
+                    0.70710677f,
+                    0f
+                },
+                new object[]{
+                    new Vector3((float)Math.PI/2, 0.0f, 0.0f),
+                    0.70710677f,
+                    0.70710677f,
+                    0.0f,
+                    0.0f
+                },
                 new object[]{
                     new Vector3(83.0f, 58.0f, 70.0f),
-                    -0.708400447f,
-                    -0.189494959f,
-                    -0.67023991f,
-                    0.114188081f
+                    -0.7084004f,
+                    -0.6387032f,
+                    -0.27782744f,
+                    0.114188105f                    
                 }
             };
         [Theory]
