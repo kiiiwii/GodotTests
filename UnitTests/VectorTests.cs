@@ -24,8 +24,8 @@ namespace UnitTests
         {
             Vector2 v1 = new Vector2(2, 5);
             var b = new Vector2();
-            Assert.False(b.x == null);
-            Assert.False(b.y == null);
+            Assert.True(b.x == 0.0f);
+            Assert.True(b.y == 0.0f);
 
             int i = 0;
             while (i <= 30)
