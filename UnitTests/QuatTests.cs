@@ -1,4 +1,4 @@
-using Godot;
+﻿using Godot;
 using Xunit;
 using System.Collections.Generic;
 using System;
@@ -81,5 +81,38 @@ namespace UnitTests
             Assert.Equal(y, result.y);
             Assert.Equal(z, result.z);
         }
+
+        // Start from axis and angle
+        public static IEnumerable<object[]> FromAxisAngleData =>
+            new List<object[]>
+            {
+                new object[]{
+                    new Vector3(0.0f, 0.0f, 0.0f),
+                    9.0f,
+                    0.0f,
+                    0.0f,
+                    0.0f,
+                    0.0f
+                },
+                new object[]{
+                    new Vector3(0.802f, 0.267f, 0.534f),
+                    5.0f,
+                    -0.8011436f,
+                    0.4800589f,
+                    0.15982011f,
+                    0.319640219f
+                }
+            };
+        [Theory]
+        [MemberData(nameof(FromAxisAngleData))]
+        private void FromAxisAngle_CoordinatesShoudlBeCorrect(Vector3 axis, float angle, float w, float x, float y, float z){
+            var result = new Quat(axis, angle);
+            
+            Assert.Equal(w, result.w);
+            Assert.Equal(x, result.x);
+            Assert.Equal(y, result.y);
+            Assert.Equal(z, result.z);
+        }
+        
     }
 }
