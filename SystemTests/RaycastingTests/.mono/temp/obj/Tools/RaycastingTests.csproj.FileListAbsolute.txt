@@ -1,0 +1,6 @@
+C:\Users\Przemysław\Documents\GodotTests\SystemTests\RaycastingTests\.mono\temp\bin\Tools\RaycastingTests.dll
+C:\Users\Przemysław\Documents\GodotTests\SystemTests\RaycastingTests\.mono\temp\bin\Tools\RaycastingTests.pdb
+C:\Users\Przemysław\Documents\GodotTests\SystemTests\RaycastingTests\.mono\temp\obj\Tools\RaycastingTests.csprojAssemblyReference.cache
+C:\Users\Przemysław\Documents\GodotTests\SystemTests\RaycastingTests\.mono\temp\obj\Tools\RaycastingTests.csproj.CoreCompileInputs.cache
+C:\Users\Przemysław\Documents\GodotTests\SystemTests\RaycastingTests\.mono\temp\obj\Tools\RaycastingTests.dll
+C:\Users\Przemysław\Documents\GodotTests\SystemTests\RaycastingTests\.mono\temp\obj\Tools\RaycastingTests.pdb
