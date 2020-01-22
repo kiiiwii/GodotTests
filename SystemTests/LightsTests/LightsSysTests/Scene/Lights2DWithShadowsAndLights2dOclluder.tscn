@@ -1,0 +1,205 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://spot.png" type="Texture" id=1]
+[ext_resource path="res://light.png" type="Texture" id=2]
+[ext_resource path="res://caster.png" type="Texture" id=3]
+[ext_resource path="res://bg.png" type="Texture" id=4]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+cull_mode = 1
+polygon = PoolVector2Array( 15.3238, -15.319, 15.7682, 16.4149, -16.0815, 15.6566, -16.0815, 15.6566 )
+
+[sub_resource type="OccluderPolygon2D" id=2]
+cull_mode = 2
+polygon = PoolVector2Array( -16.2207, -15.9388, 15.9128, -15.6373, 16.1053, 16.1133, -16.2207, 15.8393 )
+
+[sub_resource type="OccluderPolygon2D" id=3]
+polygon = PoolVector2Array( 15.319, -18.4891, 15.9638, 15.683, -17.1376, 15.6768, -16.1897, -16.0782 )
+
+[sub_resource type="OccluderPolygon2D" id=4]
+polygon = PoolVector2Array( 30.6762, 13.8387, -0.647888, -18.9595 )
+
+[sub_resource type="OccluderPolygon2D" id=5]
+polygon = PoolVector2Array( -15.6211, 14.114, -16.2852, -17.1015, -2.03107, -16.8163, 16.9227, -16.4373, 12.44, 13.2435 )
+
+[sub_resource type="OccluderPolygon2D" id=6]
+polygon = PoolVector2Array( 14.4196, 8.7814, -15.4839, 1.5253, -16.3104, -16.584, 12.692, -5.82491 )
+
+[sub_resource type="OccluderPolygon2D" id=7]
+polygon = PoolVector2Array( -16.5898, 15.4072, -8.29008, -6.07435, 9.28575, -5.58613, 2.45073, 15.8955 )
+
+[sub_resource type="OccluderPolygon2D" id=8]
+polygon = PoolVector2Array( -15.078, 14.6587, -15.078, -16.2939, 14.4007, -16.2939, 15.1376, 14.6587 )
+
+[sub_resource type="OccluderPolygon2D" id=9]
+polygon = PoolVector2Array( 13.7662, 12.2221, -7.91573, -12.1701, -14.2396, 13.1255 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 42.6058, -64.2639 )
+scale = Vector2( 7.38058, 7.47769 )
+texture = ExtResource( 4 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( -115.263, 178.858 )
+scale = Vector2( 0.792725, 0.805061 )
+texture = ExtResource( 2 )
+color = Color( 0.101961, 0.156863, 0.462745, 1 )
+shadow_enabled = true
+shadow_gradient_length = 1.1
+shadow_filter = 5
+shadow_filter_smooth = 30.0
+
+[node name="Sprite" type="Sprite" parent="Light2D"]
+texture = ExtResource( 1 )
+
+[node name="Light2D2" type="Light2D" parent="."]
+position = Vector2( 310.795, -245.965 )
+scale = Vector2( 0.703947, 0.684416 )
+texture = ExtResource( 2 )
+color = Color( 0.0705882, 0.54902, 0.101961, 1 )
+shadow_enabled = true
+shadow_gradient_length = 1.1
+shadow_filter = 5
+shadow_filter_smooth = 30.0
+
+[node name="Sprite" type="Sprite" parent="Light2D2"]
+texture = ExtResource( 1 )
+
+[node name="Light2D3" type="Light2D" parent="."]
+position = Vector2( -237.224, -265.579 )
+texture = ExtResource( 2 )
+color = Color( 0.584314, 0.239216, 0.239216, 1 )
+shadow_enabled = true
+shadow_color = Color( 0.776471, 0.27451, 0.27451, 0 )
+shadow_buffer_size = 2047
+shadow_gradient_length = 1.3
+shadow_filter = 3
+shadow_filter_smooth = 25.0
+
+[node name="Sprite" type="Sprite" parent="Light2D3"]
+texture = ExtResource( 1 )
+
+[node name="Light2D4" type="Light2D" parent="."]
+position = Vector2( 161.605, 139.629 )
+scale = Vector2( 88.7355, 87.5159 )
+texture = ExtResource( 2 )
+offset = Vector2( 0.074, -1.049 )
+texture_scale = 0.01
+color = Color( 0.858824, 0.305882, 0.176471, 1 )
+shadow_enabled = true
+shadow_color = Color( 0.156863, 0.0235294, 0.0235294, 0 )
+shadow_gradient_length = 0.2
+shadow_filter = 3
+shadow_filter_smooth = 30.0
+
+[node name="Sprite" type="Sprite" parent="Light2D4"]
+position = Vector2( 0.0201035, -0.901413 )
+scale = Vector2( 0.0166574, 0.0166574 )
+texture = ExtResource( 1 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.952941, 0.627451, 0.627451, 1 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Node2D"]
+position = Vector2( -325.378, -329.013 )
+scale = Vector2( 1.70657, 1.70657 )
+texture = ExtResource( 3 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Node2D/Sprite"]
+occluder = SubResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="Node2D"]
+position = Vector2( -48.2349, -336.137 )
+texture = ExtResource( 3 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Node2D/Sprite2"]
+occluder = SubResource( 2 )
+
+[node name="Sprite3" type="Sprite" parent="Node2D"]
+position = Vector2( 26.3785, -162.039 )
+scale = Vector2( 1.61236, 1.61236 )
+texture = ExtResource( 3 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Node2D/Sprite3"]
+occluder = SubResource( 3 )
+
+[node name="Sprite4" type="Sprite" parent="Node2D"]
+position = Vector2( -317.15, -166.927 )
+scale = Vector2( 1.89498, 1.89498 )
+texture = ExtResource( 3 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Node2D/Sprite4"]
+position = Vector2( -13.8546, 2.502 )
+occluder = SubResource( 4 )
+
+[node name="Sprite5" type="Sprite" parent="Node2D"]
+position = Vector2( -125.109, -96.4697 )
+scale = Vector2( 1.56525, 1.56525 )
+texture = ExtResource( 3 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Node2D/Sprite5"]
+occluder = SubResource( 5 )
+
+[node name="Sprite7" type="Sprite" parent="Node2D"]
+position = Vector2( -60.3557, 118.34 )
+scale = Vector2( 1.56525, 1.56525 )
+texture = ExtResource( 3 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Node2D/Sprite7"]
+position = Vector2( 1.54585, 1.83934 )
+occluder = SubResource( 5 )
+
+[node name="Sprite9" type="Sprite" parent="Node2D"]
+position = Vector2( 398.389, 21.4732 )
+scale = Vector2( 1.56525, 1.56525 )
+texture = ExtResource( 3 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Node2D/Sprite9"]
+position = Vector2( 0.378159, 0.671722 )
+occluder = SubResource( 5 )
+
+[node name="Sprite6" type="Sprite" parent="Node2D"]
+position = Vector2( -270.798, 55.0893 )
+scale = Vector2( 1.56525, 1.56525 )
+texture = ExtResource( 3 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Node2D/Sprite6"]
+position = Vector2( -2.31958, 0.0861683 )
+occluder = SubResource( 5 )
+
+[node name="Sprite8" type="Sprite" parent="Node2D"]
+position = Vector2( 195.201, -303.729 )
+scale = Vector2( 1.61236, 1.61236 )
+texture = ExtResource( 3 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Node2D/Sprite8"]
+occluder = SubResource( 6 )
+
+[node name="Sprite15" type="Sprite" parent="Node2D"]
+position = Vector2( 200.476, -135.661 )
+scale = Vector2( 1.56525, 1.56525 )
+texture = ExtResource( 3 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Node2D/Sprite15"]
+occluder = SubResource( 7 )
+
+[node name="Sprite10" type="Sprite" parent="Node2D"]
+position = Vector2( 279.235, 205.493 )
+scale = Vector2( 2.12628, 2.12628 )
+texture = ExtResource( 3 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Node2D/Sprite10"]
+position = Vector2( 0, 1.47392 )
+occluder = SubResource( 8 )
+
+[node name="Sprite11" type="Sprite" parent="Node2D"]
+position = Vector2( 405.068, -358.059 )
+scale = Vector2( 1.73453, 1.73453 )
+texture = ExtResource( 3 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Node2D/Sprite11"]
+occluder = SubResource( 9 )
