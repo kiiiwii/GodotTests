@@ -135,7 +135,7 @@ namespace IntegrationTests
                 },
                 new object[]{
                     new Vector3(0, 0, 1),
-                    1.0f,
+                    0.0f,
                     new Vector3(0, 0, 0),
                     new Vector3(1, 1, 0),
                     null
