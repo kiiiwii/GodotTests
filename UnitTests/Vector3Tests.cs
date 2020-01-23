@@ -65,7 +65,7 @@ namespace UnitTests
         }
 
         [Fact]
-        public void Test1()
+        public void Vector2Constructor_ShouldReturnTrue()
         {
             int i = 0;
             Vector2 v0 = new Vector2(i, ++i);
@@ -78,7 +78,7 @@ namespace UnitTests
             }
         }
         [Fact]
-        public void Test2()
+        public void Vector2MultiplyTwoVectors_ShouldReturnTrue()
         {
             Vector2 v1 = new Vector2(2, 5);
             var b = new Vector2();
@@ -96,7 +96,7 @@ namespace UnitTests
         }
 
         [Fact]
-        public void Test3()
+        public void Vector2DivideTwoVectors_ShouldReturnTrue()
         {
             Vector2 v1 = new Vector2(10, 10);
             var b = new Vector2();
@@ -113,7 +113,7 @@ namespace UnitTests
         }
 
         [Fact]
-        public void TestNormilize()
+        public void Vector2Normilized_ShouldReturnTrue()
         {
             int i = 0;
             while (i <= 30)

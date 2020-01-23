@@ -33,7 +33,7 @@ namespace IntegrationTests
         }
 
         [Fact]
-        public void PlaneTestHasPoint1()
+        public void PlaneTestHasPointXandZareNotZero_ShouldReturnTrue()
         {
             var plane = new Plane(1, 0, 0, 1);
             for (int j = 0; j < 50; j++)
@@ -43,7 +43,7 @@ namespace IntegrationTests
             }
         }
         [Fact]
-        public void PlaneTestHasPoint2()
+        public void PlaneTestHasPointDandZareNotZero_ShouldReturnTrue()
         {
             var plane = new Plane(0, 1, 0, (float)0.5);
             for (int j = 0; j < 50; j++)
@@ -53,7 +53,7 @@ namespace IntegrationTests
             }
         }
         [Fact]
-        public void PlaneTestHasPoint3()
+        public void PlaneTestHasPointYisNotZero_ShouldReturnTrue()
         {
             var plane = new Plane(0, 0, 1, 0);
             for (int j = 0; j < 50; j++)
@@ -63,7 +63,7 @@ namespace IntegrationTests
             }
         }
         [Fact]
-        public void IsPointOverTest1()
+        public void IsPointOverTestDisnotZero_ShouldReturnTrue()
         {
             var plane = new Plane((float)1, 0, 0, 0);
             Vector3 v3 = new Vector3((float)0.5, 0, 0);
@@ -73,7 +73,7 @@ namespace IntegrationTests
         }
 
         [Fact]
-        public void IsPointOverTest2()
+        public void IsPointOverTestVector3YisNotZero_ShouldReturnTrue()
         {
             var plane = new Plane((float)1, 0, 0, 0);
             Vector3 v3 = new Vector3(0, (float)1, 0);
@@ -84,7 +84,7 @@ namespace IntegrationTests
         }
 
         [Fact]
-        public void IsPointOverTest3()
+        public void IsPointOverTestYisNotZero_ShouldReturnTrue()
         {
             var plane = new Plane(0, (float)1, 0, 0);
             Vector3 v3 = new Vector3(0, (float)1, 0);
@@ -94,7 +94,7 @@ namespace IntegrationTests
             Assert.False(plane.IsPointOver(v3));
         }
         [Fact]
-        public void IsPointOverTest4()
+        public void IsPointOverTestReflectVectorAndReflectPlane_ShouldReturnTrue()
         {
             Vector3 v3Normal = new Vector3(1, 0, 0);
             v3Normal = v3Normal.Normalized();

@@ -115,7 +115,7 @@ namespace UnitTests
         }
 
         [Fact]
-        public void TestGetEuler1()
+        public void QuatClassTestGetEulerMethod1_ShouldReturnTrue()
         {
             Quat test2 = new Quat(new Vector3(6, 5, 2));
             Vector3 v3 = test2.GetEuler();
@@ -125,7 +125,7 @@ namespace UnitTests
             Assert.Equal(v3.z, compare.z, 3);
         }
         [Fact]
-        public void TestGetEuler2()
+        public void QuatClassTestGetEulerMethod1_ShouldReturnTrue()
         {
             Quat test2 = new Quat(new Vector3(1, 1, 1));
             Vector3 v3 = test2.GetEuler();
@@ -135,7 +135,7 @@ namespace UnitTests
             Assert.Equal(v3.z, compare.z, 3);
         }
         [Fact]
-        public void TestGetEuler3()
+        public void QuatClassTestGetEulerMethod1_ShouldReturnTrue()
         {
             Quat test2 = new Quat(new Vector3((float)0.5, (float)0.5, (float)0.5));
             Vector3 v3 = test2.GetEuler();
@@ -146,7 +146,7 @@ namespace UnitTests
         }
 
         [Fact]
-        public void TestGetEuler4()
+        public void QuatClassTestGetEulerMethod1_ShouldReturnTrue()
         {
             Quat q = new Quat(1, 1, 1, 1);
             Vector3 v3 = q.GetEuler();
@@ -157,7 +157,7 @@ namespace UnitTests
         }
 
         [Fact]
-        public void TestInversion1()
+        public void QuatClassTestInversion_ShouldReturnTrue()
         {
             int i = 0;
             float w = (float)0.1;
@@ -184,7 +184,7 @@ namespace UnitTests
         }
 
         [Fact]
-        public void TestIsNormalized()
+        public void QuatClassTestTestIsNormalizedAndLength_ShouldReturnTrue()
         {
             int i = 0;
             float w = (float)0.1;
@@ -214,7 +214,7 @@ namespace UnitTests
         }
 
         [Fact]
-        public void TestNormalized()
+        public void QuatClassTestNormalized_ShouldReturnTrue()
         {
             int i = 0;
             float w = (float)0.1;
@@ -243,23 +243,24 @@ namespace UnitTests
         }
 
         [Fact]
-        public void TestXform1()
+        public void QuatClassTestXform1_ShouldReturnTrue()
         {
             Quat q = new Quat((float)0.5, (float)0.5, (float)0.5, (float)0.5);
             Vector3 v3 = q.Xform(new Vector3(2, 2, 2));
             Assert.Equal(v3, new Vector3(2, 2, 2));
         }
 
-        //Multyplies by 4???????
+        //Multiplies by 4?
+        //============================================
         [Fact]
-        public void TestXform2()
+        public void QuatClassTestXform2_ShouldReturnTrue()
         {
             Quat q3 = new Quat(1, 1, 1, 1);
             Vector3 v3_3 = q3.Xform(new Vector3(1, 1, 1));
             Assert.Equal(v3_3, new Vector3(1, 1, 1));
         }
         [Fact]
-        public void TestXform3()
+        public void QuatClassTestXform3_ShouldReturnTrue()
         {
             Quat q2 = new Quat(1, 1, 1, 1);
             Vector3 v3_2 = q2.Xform(new Vector3(2, 2, 2));
@@ -267,7 +268,7 @@ namespace UnitTests
         }
         //=======
         [Fact]
-        public void TestXform4()
+        public void QuatClassTestXform4_ShouldReturnTrue()
         {
             Quat q2 = new Quat((float)0.25, (float)0.25, (float)0.25, (float)0.25);
             Vector3 test = new Vector3(1, 2, 3);
