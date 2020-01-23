@@ -1,6 +1,7 @@
 using System;
 using Xunit;
 using Godot;
+using System.Collections.Generic;
 
 namespace IntegrationTests
 {
@@ -105,6 +106,51 @@ namespace IntegrationTests
             Assert.False(plane.IsPointOver(v3));
             v3 = v3.Reflect(new Vector3(0, 1, 1).Normalized());
             Assert.True(plane.IsPointOver(v3));
+        }
+
+        //Start IntersectRay
+        public static IEnumerable<object[]> IntersectRayData =>
+            new List<object[]>
+            {
+                new object[]{
+                    new Vector3(0, 0, 1),
+                    1.0f,
+                    new Vector3(0, 0, 0),
+                    new Vector3(0, 0, 1),
+                    new Vector3(0, 0, 1)
+                },
+                new object[]{
+                    new Vector3(0, 0, 1),
+                    1.0f,
+                    new Vector3(0, 0, 0),
+                    new Vector3(0, 0, -1),
+                    null
+                },
+                new object[]{
+                    new Vector3(0, 0, 1),
+                    1.0f,
+                    new Vector3(0, 0, 0),
+                    new Vector3(1, 1, 0.000001f),
+                    new Vector3(1000000, 1000000, 1)
+                },
+                new object[]{
+                    new Vector3(0, 0, 1),
+                    0.0f,
+                    new Vector3(0, 0, 0),
+                    new Vector3(1, 1, 0),
+                    null
+                }
+            };
+
+
+        [Theory]
+        [MemberData(nameof(IntersectRayData))]
+        public void IntersectRay_ShouldReturnCorrectResult(Vector3 normalVector, float distance, Vector3 from, Vector3 direction, Vector3? expected) {
+            
+            var testObj = new Plane(normalVector, distance);
+            var result = testObj.IntersectRay(from, direction);
+
+            Assert.Equal(expected, result);
         }
     }
 }
