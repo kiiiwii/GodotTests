@@ -125,7 +125,7 @@ namespace UnitTests
             Assert.Equal(v3.z, compare.z, 3);
         }
         [Fact]
-        public void QuatClassTestGetEulerMethod1_ShouldReturnTrue()
+        public void QuatClassTestGetEulerMethod2_ShouldReturnTrue()
         {
             Quat test2 = new Quat(new Vector3(1, 1, 1));
             Vector3 v3 = test2.GetEuler();
@@ -135,7 +135,7 @@ namespace UnitTests
             Assert.Equal(v3.z, compare.z, 3);
         }
         [Fact]
-        public void QuatClassTestGetEulerMethod1_ShouldReturnTrue()
+        public void QuatClassTestGetEulerMethod3_ShouldReturnTrue()
         {
             Quat test2 = new Quat(new Vector3((float)0.5, (float)0.5, (float)0.5));
             Vector3 v3 = test2.GetEuler();
@@ -146,7 +146,7 @@ namespace UnitTests
         }
 
         [Fact]
-        public void QuatClassTestGetEulerMethod1_ShouldReturnTrue()
+        public void QuatClassTestGetEulerMethod4_ShouldReturnTrue()
         {
             Quat q = new Quat(1, 1, 1, 1);
             Vector3 v3 = q.GetEuler();
